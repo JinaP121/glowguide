@@ -1,1 +1,1 @@
-# glow-guide
+# glowguide
