@@ -1,0 +1,337 @@
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('../font/InriaSerif-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inria Sans';
+  src: url('InriaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InriaSans-Regular';
+  src: url('../font/InriaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InriaSansBold';
+  src: url('../font/InriaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .nav-center {
+    order: -1;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: contents;
+  }
+
+  .nav-container a.nav-item {
+    display: inline-block;
+    background-color: #E7E3A3;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    width: 140px;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'inria', serif;
+  background-color: #fffdf5;
+  color: #333;
+  padding: 1px;
+}
+
+/* Navigation styles */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #E7E3A3;
+  border-radius: 40px;
+  padding: 15px 40px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-title {
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-item {
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  border-radius: 40px;
+}
+
+.nav-item:active {
+  background-color: #949c66;
+  color: white;
+}
+
+/* Page transition effect */
+body.flip-once {
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Page title styling */
+.page-title {
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* AM/PM routine layout */
+.routine-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.routine-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 440px;
+}
+
+.routine-title {
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.am-title {
+  background-color: #f8fcd3;
+  color: #333;
+}
+
+.pm-title {
+  background-color: #4e433f;
+  color: white;
+}
+
+.routine-box {
+  font-family: 'Inria Sans', sans-serif;
+  font-style: italic;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-size: 14px;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.am {
+  background-color: #f8fcd3;
+  color: #000;
+}
+
+.pm {
+  background-color: #4e433f;
+  color: white;
+}
+
+.pm ol {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.pm li {
+  margin-bottom: 10px;
+}
+
+/* Midday tip section */
+.midday-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 1100px;
+  margin: 30px auto 0;
+}
+
+.midday-title {
+  font-family: 'Inria Sans', sans-serif;
+  background-color: #e5dd92;
+  padding: 8px 24px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.midday-box {
+  font-family: 'Inria Sans', sans-serif;
+  background-color: #e5dd92;
+  padding: 16px 24px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Weekly extras section - use image as background*/
+.weekly-section {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  align-items: center;
+  background-color: #fffdf5;
+  background-image: url('../image/wkly_extra.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  padding: 100px 20px 60px;
+  row-gap: 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.weekly-title {
+  grid-row: 2;
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 28px;
+  z-index: 2;
+  margin-top: 40px;
+}
+
+.weekly-top-row,
+.weekly-bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  z-index: 2;
+}
+
+.weekly-top-row {
+  grid-row: 1;
+}
+
+.weekly-bottom-row {
+  grid-row: 3;
+}
+
+.bubble-box {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 240px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.6;
+  font-family: 'Inria Sans', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bubble-box h4 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.bubble-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .weekly-top-row,
+  .weekly-bottom-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

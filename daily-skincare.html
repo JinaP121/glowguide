@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Skincare - Glow Guide</title>
+  <link rel="stylesheet" href="css/style_daily.css" />
+</head>
+
+<body>
+  <!-- Nav bar -->
+  <nav class="nav-container">
+    <a href="index.html" class="nav-item" >About</a>
+    <a href="daily-skincare.html" class="nav-item" style="text-decoration: underline; text-decoration-thickness: 3px;">Daily Skincare</a>
+    <h1 class="site-title">Glow Guide</h1>
+    <a href="skin-health.html" class="nav-item">Skin Health Guide</a>
+    <a href="skin-glossary.html" class="nav-item">Skin Glossary</a>
+  </nav>
+  
+  <!-- Main Title -->
+  <h2 class="page-title">Daily Skincare</h2> 
+
+  <!-- AM / PM Cleansing -->
+  <div class="routine-grid">
+    <!-- AM Section -->
+    <div class="routine-section">
+      <div class="routine-title am-title">AM Cleansing (Morning Routine)</div>
+      <div class="routine-box am">
+        <p><strong>For healthy skin:</strong><br>
+        Use a mild acidic cleanser, enzyme cleanser, or just rinse with water.</p>
+  
+        <p><strong>For sensitive or weak skin barrier:</strong><br>
+        • Water only: Protects barrier but may not fully remove dirt.<br>
+        • Cleanser: Cleans well but may weaken the barrier.</p>
+  
+        <p><strong>Recommendation:</strong><br>
+        Skip heavy products at night & cleanse with water or an enzyme cleanser in the morning.</p>
+      </div>
+    </div>
+  
+    <!-- PM Section -->
+    <div class="routine-section">
+      <div class="routine-title pm-title">PM Cleansing (Night Routine)</div>
+      <div class="routine-box pm">
+        <p><strong>Water alone is not enough!</strong></p>
+        <p>Use a cleanser to remove dirt, oil, and makeup.</p>
+        <p>If you wear makeup or sunscreen → <strong>Double cleansing is necessary!</strong></p>
+        <ol>
+          <li><strong>Cleansing Oil/Cream:</strong> Gently massage for 30 sec – 1 min, then rinse with lukewarm water.</li>
+          <li><strong>Foam Cleanser:</strong> Lather, cleanse the entire face (focus on T-zone & U-zone), and rinse thoroughly.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+<!-- Midday Cleansing Tip -->
+<div class="midday-section">
+  <h3 class="midday-title">Midday Cleansing</h3>
+  <div class="midday-box">
+    <p>If your face feels sticky or dirty, rinse with water and apply moisturizer.</p>
+  </div>
+</div>
+
+<!-- Weekly Extras -->
+<section class="weekly-section">
+  <h3 class="weekly-title">Weekly Extras</h3>
+
+  <div class="weekly-top-row">
+    <div class="bubble-box lifestyle">
+      <h4>Lifestyle Habits for Healthy Skin</h4>
+      <p>• Exercise, stress management, healthy diet, enough sleep<br>
+        (Aim to sleep by 10–11 PM, at the latest by 12 AM).</p>
+    </div>
+
+    <div class="bubble-box sensitive">
+      <h4>Note on Sensitive Skin</h4>
+      <p>• Be cautious with paper sheet masks.<br>
+        • If you have sensitive skin, avoid using masks until your skin barrier is restored.<br>
+        • Start with a regenerating cream first, then introduce hydrating masks.</p>
+    </div>
+  </div>
+
+  <div class="weekly-bottom-row">
+    <div class="bubble-box Moisturizing">
+      <h4>Moisturizing & Skin Barrier Care</h4>
+      <p>• Using a moisturizer is essential to maintain healthy skin.<br>
+        • Avoid harsh exfoliation; use hydrating products that support the skin barrier.</p>
+    </div>
+
+    <div class="bubble-box hydration">
+      <h4>Hydration & Sheet Mask Tips</h4>
+      <p>• Keep skin hydrated at all times.<br>
+        • Using a sheet mask daily is okay, but avoid leaving it on for more than 10–15 minutes.<br>
+        • Check ingredients (look for Hydrogen).</p>
+    </div>
+
+    <div class="bubble-box masks">
+      <h4>Recommended Masks</h4>
+      <p>• Hydrating masks<br>
+        • NO Whitening & anti-wrinkle masks (may cause irritation with frequent use).<br>
+        • Use functional masks twice a week max.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Javascript to get effect when the change pages -->
+  <script>
+    document.querySelectorAll('.nav-item').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const current = window.location.pathname.split('/').pop();
+        const target = this.getAttribute('href');
+  
+        if (target === current) return; // if already on this page - do nothing
+  
+        e.preventDefault();
+        const url = this.href;
+  
+        document.body.classList.add('flip-once'); // if change to other pages - use slide + fade
+  
+        setTimeout(() => {window.location.href = url;}, 199); 
+      });
+    });
+  </script>
+</body>
+</html>
