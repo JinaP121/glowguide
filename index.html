@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Guide</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+
+  <!-- Nav bar and page names -->
+  <nav class="nav-container">
+    <a href="index.html" class="nav-item" style="text-decoration: underline; text-decoration-thickness: 3px;">About</a>
+    <a href="daily-skincare.html" class="nav-item">Daily Skincare</a>
+    <h1 class="site-title">Glow Guide</h1>
+    <a href="skin-health.html" class="nav-item">Skin Health Guide</a>
+    <a href="skin-glossary.html" class="nav-item">Skin Glossary</a>
+  </nav>
+
+  
+ <!-- Slogen and Glow Guide Statement Section-->
+  <div class="hero-section">
+    <div class="hero-text">
+      <h2>Glowing Skin Starts With Good Daily Habits.</h2>
+    </div>
+    <div class="hero-image">
+      <img src="image/Final_Skincare_Logo.png" alt="Glow Guide Leaf" class="leaf" />
+    </div>
+  </div>
+
+
+<!-- Intro Section -->
+<section class="info-section">
+    <h2 class="info-title">What is Glow Guide?</h2>
+    <div class="info-box">
+      <p class="info-text">
+        Glow Guide is about achieving naturally healthy, glowing skin not just surface shine.
+        This website helps you build good skincare habits with simple routines and lifestyle tips
+        that anyone can follow. No expensive products are needed, and there are no ads or brand promotions
+        just real, effective skincare methods. Healthy skin comes from daily habits.
+        Let’s create better skincare routines together.
+      </p>
+    </div>
+  </section>
+  
+
+  <!-- How to Use Section -->
+  <section class="how-to-use">
+    <h2 class="section-heading">How to use this website?</h2>
+  
+    <!-- First Row - seperate to postion bullet1.2 at the top-->
+    <div class="step-row top-row">
+      <div class="step-box">
+        <p class="step-title">• 1. Start with the Home Page</p>
+        <p class="step-text">
+          Learn what Glow Guide is all about and how it helps you take care of your skin without overspending.
+        </p>
+      </div>
+      <div class="step-box">
+        <p class="step-title">• 2. Understand Skincare Terms</p>
+        <p class="step-text">
+          Not sure what AHAs, Ceramides, Retinol, or SPF mean? Visit the Skin Glossary to find simple explanations of common skincare ingredients so you can make better choices.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Second Row - postion other bullets-->
+    <div class="step-row bottom-row">
+      <div class="step-box">
+        <p class="step-title">• 3. Follow a Daily Skincare Routine</p>
+        <p class="step-text">
+          For a step-by-step guide, check out the Daily Skincare Routine page. It covers the basic skincare steps for all skin types, so you know exactly what to do morning and night.
+        </p>
+      </div>
+      <div class="step-box">
+        <p class="step-title">• 4. Find Solutions for Your Skin Concerns</p>
+        <p class="step-text">
+          If you have acne, dryness, or irritation, the Skin Concerns & Solutions page offers practical tips and simple fixes to help improve your skin.
+        </p>
+      </div>
+      <div class="step-box">
+        <p class="step-title">• Tip</p>
+        <p class="step-text">
+          Skincare is personal! Explore different routines, read through the glossary, and come back anytime for more helpful skincare tips.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A Section -->
+  <section class="qa-section">
+    <h2 class="qa-title">Q&A:</h2>
+    <div class="qa-box">
+      <div class="qa-item">
+        <p class="qa-question">Q: Why is the morning and night skincare routine different?</p>
+        <p class="qa-answer">A: In the morning, sun protection and light hydration are important. At night, you need to remove dirt and help your skin recover.</p>
+      </div>
+  
+      <div class="qa-item">
+        <p class="qa-question">Q: My skin feels tight after washing. Is that normal?</p>
+        <p class="qa-answer">A: No! If your skin feels tight, it may mean your skin barrier is weak or your cleanser is too harsh. Try using a gentle cleanser.</p>
+      </div>
+  
+      <div class="qa-item">
+        <p class="qa-question">Q: How many times should I wash my face a day?</p>
+        <p class="qa-answer">A: Twice a day (morning and night) is best. Washing too often can damage your skin barrier.</p>
+      </div>
+  
+      <div class="qa-item">
+        <p class="qa-question">Q: Do I need to use a moisturizer?</p>
+        <p class="qa-answer">A: Yes! No matter your skin type, moisturizer is important. Even oily skin needs hydration.</p>
+      </div>
+  
+      <div class="qa-item">
+        <p class="qa-question">Q: Do I really need to wear sunscreen?</p>
+        <p class="qa-answer">A: Yes! UV rays can reach your skin even indoors, so sunscreen is a must every day. If you stay inside, SPF 30 is usually enough.</p>
+      </div>
+    </div>
+
+  <!-- Contact Section -->
+    <div class="contact">
+        <h4 class="contact-title">Contact</h4>
+        <p><span class="contact-label">&lt;Email&gt</span><br>
+           <span class="contact-info">jinapark@ocadu.ca</span>
+        </p>
+      </div>
+  </section>
+
+  <!-- Javascript to get effect when the change pages -->
+  <script>
+    document.querySelectorAll('.nav-item').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const current = window.location.pathname.split('/').pop();
+        const target = this.getAttribute('href');
+  
+        if (target === current) return; // if already on this page - do nothing
+  
+        e.preventDefault();
+        const url = this.href;
+  
+        document.body.classList.add('flip-once'); // if change to other pages - use slide + fade
+  
+        setTimeout(() => {window.location.href = url;}, 199); 
+      });
+    });
+  </script>
+</body>
+</html>

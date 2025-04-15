@@ -1,0 +1,385 @@
+/* ================================
+ Web Fonts - Load custom fonts
+================================= */
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('../font/InriaSerif-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inria Sans';
+  src: url('InriaSans-Regular.woff2') format('woff2'),
+       url('InriaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InriaSans-Regular';
+  src: url('../font/InriaSans-Regular.woff2') format('woff2'),
+       url('../font/InriaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InriaSansBold';
+  src: url('../font/InriaSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================
+ Responsive Design for Mobile
+================================= */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .nav-center {
+    order: -1; /* moves site title to top */
+  }
+
+  .nav-left,
+  .nav-right {
+    display: contents;
+  }
+
+  .nav-container a.nav-item {
+    display: inline-block;
+    background-color: #E7E3A3;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    width: 140px;
+  }
+
+  .nav-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+
+/* ================================
+  Base Styles
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'inria', serif;
+  background-color: #fffdf5;
+  color: #333;
+  padding: 1px;
+}
+
+/* ================================
+   Leaf Animation - gentle moving
+================================= */
+@keyframes sway {
+  0% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+.leaf {
+  width: 220px;
+  animation: sway 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* ================================
+  Navigation Bar
+================================= */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E7E3A3;
+  border-radius: 40px;
+  padding: 15px 40px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-title {
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-item {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:active {
+  background-color: #949c66;
+  color: white;
+}
+
+/* ================================================================
+   Page Effect (Slide & fade out when clicked)
+================================================================= */
+body.flip-once {
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* ================================
+   Hero Section - Big intro box
+================================= */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 999px;
+  margin: 80px auto;
+  padding: 100px 80px;
+  background-color: #E7E3A3;
+  border-radius: 40px;
+}
+
+.hero-text {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.hero-text h2 {
+  font-family: 'InriaSans-Regular', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 350px;
+  line-height: 1.5;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 350px;
+  border-radius: 12px;
+}
+
+/* ================================
+   Info Section - What is this site?
+================================= */
+.info-section {
+  background-color: #f0ecc0;
+  border-radius: 40px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.info-title {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Inria Serif', serif;
+  margin-bottom: 40px;
+}
+
+.info-box {
+  background-color: #E7E3A3;
+  border-radius: 15px;
+  padding: 30px 150px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-text {
+  font-family: 'InriaSans-Regular', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ================================
+   How to Use Section
+================================= */
+.how-to-use {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.step-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.top-row {
+  gap: 60px;
+}
+
+.bottom-row {
+  gap: 40px;
+}
+
+.step-box {
+  background-color: #E7E3A3;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 189px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.step-title {
+  font-family: 'InriaSans-Regular', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.step-text {
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================================
+   Q&A Section
+================================= */
+.qa-section {
+  background-color: #f0ecc0;
+  padding: 60px 30px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 60px auto 0;
+}
+
+.qa-title {
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.qa-box {
+  background-color: #E7E3A3;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+  font-family: 'Inria Sans', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.qa-item {
+  margin-bottom: 25px;
+}
+
+.qa-question {
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.qa-answer {
+  font-style: normal;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* ================================
+   Contact Info Box
+================================= */
+.contact {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 100px;
+  font-family: 'Inria Sans', sans-serif;
+}
+
+.contact-title {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Inria Serif', serif;
+  margin-bottom: 5px;
+}
+
+.contact-label {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.contact-info {
+  font-size: 15px;
+  color: #222;
+}
