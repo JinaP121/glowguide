@@ -1,0 +1,225 @@
+/* === Font Imports === */
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('../font/InriaSerif-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inria Sans';
+  src: url('InriaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InriaSans-Regular';
+  src: url('../font/InriaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InriaSansBold';
+  src: url('../font/InriaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Responsive Styles for Smaller Screens === */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .nav-center {
+    order: -1;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: contents;
+  }
+
+  .nav-container a.nav-item {
+    display: inline-block;
+    background-color: #E7E3A3;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    width: 140px;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'inria', serif;
+  background-color: #fffdf5;
+  color: #333;
+  padding: 1px;
+}
+
+/* === Nav Bar === */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #E7E3A3;
+  border-radius: 40px;
+  padding: 15px 40px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-title {
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-item {
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  border-radius: 40px;
+}
+
+.nav-item:active {
+  background-color: #949c66;
+  color: white;
+}
+
+/* === Page Flip Effect (Used for Transitions) === */
+body.flip-once {
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* === Skin Concerns Section Layout === */
+.skin-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  background-color: #E7E3A3;
+  padding: 40px 30px;
+  border-radius: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+/* === Each Skin Concern Group === */
+.skin-box {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+/* === Round Image for Skin Concern === */
+.skin-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Description Columns (Text Info) === */
+.skin-info {
+  display: flex;
+  flex: 1;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skin-col {
+  flex: 1 1 300px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.skin-col h3 {
+  font-family: 'InriaSans-Regular', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.skin-col p {
+  font-family: 'InriaSans-Regular', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.skin-col ul {
+  padding-left: 18px;
+  margin-bottom: 16px;
+}
+
+.skin-col ul li {
+  font-family: 'InriaSans-Regular', sans-serif;
+  margin-bottom: 6px;
+}

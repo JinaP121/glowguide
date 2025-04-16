@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skin Health Guide - Glow Guide</title>
+  <link rel="stylesheet" href="css/style_skinhealth.css" />
+  <link href="https://fonts.cdnfonts.com/css/rangile" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="nav-container">
+    <a href="index.html" class="nav-item" >About</a>
+    <a href="daily-skincare.html" class="nav-item" >Daily Skincare</a>
+    <h1 class="site-title">Glow Guide</h1>
+    <a href="skin-health.html" class="nav-item" style="text-decoration: underline; text-decoration-thickness: 3px;" >Skin Health Guide</a>
+    <a href="skin-glossary.html" class="nav-item">Skin Glossary</a>
+  </nav>
+
+<!-- Skin Concerns Section -->
+<section class="skin-section">
+  <h2 class="section-title">Skin Concerns & Solution:</h2>
+
+  <!-- Acne-Prone Skin -->
+  <div class="skin-box">
+    <img src="image/acne skin.png" alt="Acne-Prone Skin" class="skin-img" />
+    
+    <div class="skin-info">
+      <div class="skin-col">
+        <h3>Acne-Prone Skin</h3>
+        <p><strong>What to Avoid:</strong></p>
+        <ul>
+          <li>Vitamin B6 & B12 (Methylcobalamin / Cyanocobalamin) → May worsen acne</li>
+          <li>Irritation: Avoid rubbing, skincare devices, Gua Sha, and touching the skin</li>
+          <li>Heavy skincare products: Avoid cocoa butter, coconut oil, lanolin, and oily ingredients</li>
+          <li><strong>Diet:</strong> Reduce high GI foods (sugary & processed foods) and dairy</li>
+        </ul>
+      </div>
+      
+      <div class="skin-col">
+        <h3>How to Manage:</h3>
+        <ul>
+          <li><strong>Cleansing:</strong> Double cleanse with water or gel-type cleanser (mild, non-stripping)</li>
+          <li><strong>Moisturizing:</strong> Choose ceramide-based lightweight moisturizers</li>
+          <li><strong>Sunscreen:</strong> Use gel/liquid-type with Zinc Oxide or Titanium Dioxide (avoid Benzophenone, fragrance)</li>
+          <li><strong>Skin Barrier Repair:</strong> Use recovery creams and consult a dermatologist if needed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dry & Dehydrated Skin -->
+  <div class="skin-box">
+    <img src="image/Dry Skin.png" alt="Dry Skin" class="skin-img" />
+    
+    <div class="skin-info">
+      <div class="skin-col">
+        <h3>Dry & Dehydrated Skin</h3>
+        <p><strong>Dry Skin:</strong></p>
+        <ul>
+          <li>Lacks natural oils & lipids</li>
+          <li>Feels rough, flaky, and prone to fine lines</li>
+        </ul>
+
+        <p><strong>Dehydrated Skin:</strong></p>
+        <ul>
+          <li>Oily surface but dry inside</li>
+          <li>Feels tight even after applying lotion</li>
+        </ul>
+      </div>
+      
+      <div class="skin-col">
+        <h3>How to Manage:</h3>
+        <ul>
+          <li><strong>After Showering:</strong> Apply moisturizer within 3 minutes</li>
+          <li><strong>Water Temperature:</strong> Use lukewarm water (avoid hot)</li>
+          <li><strong>Environmental Hydration:</strong> Use a humidifier</li>
+          <li><strong>Hydration Boost:</strong> Use HA-based creams or oral supplements</li>
+          <li><strong>Hydration From Within:</strong> Drink water (e.g. 2 glasses morning, 3 lunch, 2 dinner)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Javascript to get effect when the change pages -->
+<script>
+    document.querySelectorAll('.nav-item').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const current = window.location.pathname.split('/').pop();
+        const target = this.getAttribute('href');
+  
+        if (target === current) return; // if already on this page - do nothing
+  
+        e.preventDefault();
+        const url = this.href;
+  
+        document.body.classList.add('flip-once'); // if change to other pages - use slide + fade
+  
+        setTimeout(() => {window.location.href = url;}, 199); 
+      });
+    });
+</script>
+</body>
+</html>
