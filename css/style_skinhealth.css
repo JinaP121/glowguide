@@ -1,4 +1,11 @@
-/* === Font Imports === */
+/* ================================
+   Web Fonts - Load custom fonts
+ 
+  Design:
+  - Layout and styling decisions (rounded corners, pastel palette) are custom-designed by the creator for accessibility and softness.
+  - No third-party CSS or JS frameworks were used.
+--> ================================================================================================================================== */
+
 @font-face {
   font-family: 'Inria Serif';
   src: url('../font/InriaSerif-BoldItalic.woff') format('woff');
@@ -82,6 +89,10 @@
   box-sizing: border-box;
 }
 
+/* Font:Inria serif
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 body {
   font-family: 'inria', serif;
   background-color: #fffdf5;
@@ -116,6 +127,10 @@ body {
   transform: translateX(-50%);
 }
 
+/* Font:Inria serif
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .site-title {
   font-family: 'Inria Serif', serif;
   font-style: italic;
@@ -143,14 +158,14 @@ body {
   color: white;
 }
 
-/* === Page Flip Effect (Used for Transitions) === */
+/* Page Flip Effect (Used for Transitions) */
 body.flip-once {
   transform: translateX(-20px);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* === Skin Concerns Section Layout === */
+/* Skin Concerns Section Layout */
 .skin-section {
   max-width: 1100px;
   margin: 60px auto;
@@ -159,6 +174,10 @@ body.flip-once {
   border-radius: 20px;
 }
 
+/* Font:Inria Serif
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .section-title {
   font-size: 24px;
   font-family: 'Inria Serif', serif;
@@ -190,7 +209,7 @@ body.flip-once {
 .skin-info {
   display: flex;
   flex: 1;
-  gap: 40px;
+  gap: 4px;
   flex-wrap: wrap;
 }
 
@@ -200,6 +219,10 @@ body.flip-once {
   line-height: 1.6;
 }
 
+/* Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .skin-col h3 {
   font-family: 'InriaSans-Regular', sans-serif;
   font-style: italic;
@@ -207,6 +230,14 @@ body.flip-once {
   margin-bottom: 8px;
 }
 
+/* Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+  (https://www.fontsquirrel.com/tools/webfont-generator)
+   
+  Individual Text Column Styling:
+  Each column handles either “what to avoid” or “how to manage”
+  Font size is comfortable and legible
+*/
 .skin-col p {
   font-family: 'InriaSans-Regular', sans-serif;
   font-style: italic;
@@ -219,6 +250,10 @@ body.flip-once {
   margin-bottom: 16px;
 }
 
+/* Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .skin-col ul li {
   font-family: 'InriaSans-Regular', sans-serif;
   margin-bottom: 6px;
