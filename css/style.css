@@ -251,6 +251,12 @@ body.flip-once {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
 }
 
+@media (max-width: 600px) {
+  .info-box {
+    padding: 20px;
+  }
+}
+
 /* Text inside the info-box
    ------------------------ 
    Font:Inria Sans
