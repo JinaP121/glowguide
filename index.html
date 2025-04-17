@@ -9,7 +9,9 @@
 
 <body>
 
-  <!-- Nav bar and page names -->
+  <!-- Nav bar and page names 
+   Center title 'Glow Guide' remains static in the middle of the nav
+   Visual style: rounded layout designed for readability and clarity (custom design decision, not based on external libraries)-->
   <nav class="nav-container">
     <a href="index.html" class="nav-item" style="text-decoration: underline; text-decoration-thickness: 3px;">About</a>
     <a href="daily-skincare.html" class="nav-item">Daily Skincare</a>
@@ -17,9 +19,11 @@
     <a href="skin-health.html" class="nav-item">Skin Health Guide</a>
     <a href="skin-glossary.html" class="nav-item">Skin Glossary</a>
   </nav>
-
   
- <!-- Slogen and Glow Guide Statement Section-->
+ <!-- Slogen and Glow Guide Statement Section
+    Image:
+     - Leaf Illustration: The leaf image featured on the homepage was hand drawn by Jina Park 
+  -->
   <div class="hero-section">
     <div class="hero-text">
       <h2>Glowing Skin Starts With Good Daily Habits.</h2>
@@ -49,7 +53,7 @@
   <section class="how-to-use">
     <h2 class="section-heading">How to use this website?</h2>
   
-    <!-- First Row - seperate to postion bullet1.2 at the top-->
+    <!-- First Row - seperate to postion bullet 1,2 at the top-->
     <div class="step-row top-row">
       <div class="step-box">
         <p class="step-title">• 1. Start with the Home Page:</p>
@@ -89,6 +93,7 @@
   </section>
 
   <!-- Q&A Section -->
+  
   <section class="qa-section">
     <h2 class="qa-title">Q&A:</h2>
     <div class="qa-box">
@@ -127,7 +132,13 @@
       </div>
   </section>
 
-  <!-- Javascript to get effect when the change pages -->
+  <!-- Javascript to get effect when the change pages
+     -------------------------------------------------- 
+     This script adds a simple animation effect 
+     (slide left + fade out) when users click 
+     a navigation item to go to a different page.
+     It makes the site feel more dynamic and smooth.
+  -->
   <script>
     document.querySelectorAll('.nav-item').forEach(link => {
       link.addEventListener('click', function (e) {

@@ -1,6 +1,15 @@
 /* ================================
- Web Fonts - Load custom fonts
-================================= */
+   Web Fonts - Load custom fonts
+ 
+  Image:
+  - Leaf Illustration
+    The leaf image featured on the homepage was hand drawn by Jina Park
+
+  Design:
+  - Layout and styling decisions (rounded corners, pastel palette) are custom-designed by the creator for accessibility and softness.
+  - No third-party CSS or JS frameworks were used.
+--> ================================================================================================================================== */
+
 @font-face {
   font-family: 'Inria Serif';
   src: url('../font/InriaSerif-BoldItalic.woff') format('woff');
@@ -33,9 +42,7 @@
   font-display: swap;
 }
 
-/* ================================
- Responsive Design for Mobile
-================================= */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -72,9 +79,7 @@
   }
 }
 
-/* ================================
-  Base Styles
-================================= */
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -88,9 +93,7 @@ body {
   padding: 1px;
 }
 
-/* ================================
-   Leaf Animation - gentle moving
-================================= */
+/* Leaf Animation - gentle moving */
 @keyframes sway {
   0% { transform: rotate(-3deg); }
   50% { transform: rotate(3deg); }
@@ -103,9 +106,7 @@ body {
   transform-origin: bottom center;
 }
 
-/* ================================
-  Navigation Bar
-================================= */
+/* Navigation Bar */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -132,6 +133,10 @@ body {
   transform: translateX(-50%);
 }
 
+/*Font: Inria Serif
+  - Webfont generated via Font Squirrel Webfont Generator 
+  (https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .site-title {
   font-family: 'Inria Serif', serif;
   font-style: italic;
@@ -157,18 +162,20 @@ body {
   color: white;
 }
 
-/* ================================================================
-   Page Effect (Slide & fade out when clicked)
-================================================================= */
+/* Page Effect (Slide & fade out when clicked) */
 body.flip-once {
   transform: translateX(-20px);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* ================================
-   Hero Section - Big intro box
-================================= */
+/* Hero Section - Big intro box
+  ----------------------------
+  Layout is handled using Flexbox to place the text and image side by side.
+  The section is centered with a max-width of 999px to keep it clean on large screens.
+  The background color (#E7E3A3) gives a warm, soft feel to match the brand.
+  Generous padding and rounded corners make it look friendly
+*/
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -180,6 +187,7 @@ body.flip-once {
   border-radius: 40px;
 }
 
+
 .hero-text {
   flex: 2;
   display: flex;
@@ -188,6 +196,11 @@ body.flip-once {
   text-align: left;
 }
 
+/* Font: Inria Serif & Inria Sans
+  -------------------------------
+ Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator) 
+*/
 .hero-text h2 {
   font-family: 'InriaSans-Regular', sans-serif;
   font-size: 18px;
@@ -196,6 +209,11 @@ body.flip-once {
   line-height: 1.5;
 }
 
+/* Image:Leaf Illustration
+   -----------------------
+   The leaf image featured on the homepage was hand drawn by Jina Park 
+   <img src="image/Final_Skincare_Logo.png" alt="Glow Guide Leaf" class="leaf" /> 
+*/
 .hero-image {
   flex: 1;
   display: flex;
@@ -208,9 +226,11 @@ body.flip-once {
   border-radius: 12px;
 }
 
-/* ================================
-   Info Section - What is this site?
-================================= */
+/* Info Section - What is this site?
+   ---------------------------------
+   It's designed to feel warm and used soft yellow tones.
+   Content is centered and framed within a rounded box for readability.
+*/
 .info-section {
   background-color: #f0ecc0;
   border-radius: 40px;
@@ -235,6 +255,12 @@ body.flip-once {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Text inside the info-box
+   ------------------------ 
+   Font:Inria Sans
+  - Webfont generated via Font Squirrel Webfont Generator 
+  (https://www.fontsquirrel.com/tools/webfont-generator) 
+ */
 .info-text {
   font-family: 'InriaSans-Regular', sans-serif;
   font-size: 15px;
@@ -243,9 +269,15 @@ body.flip-once {
   color: #222;
 }
 
-/* ================================
+/* 
    How to Use Section
-================================= */
+   -------------------
+  This section acts as a guide on how to use the website.
+    Content is split into two rows:
+  - First row explains where to begin and how to explore terms
+  - Second row includes daily skincare and skin concern tips
+    Each step is placed in a visually distinct "box" (step-box).
+ */
 .how-to-use {
   padding: 60px 20px;
   text-align: center;
@@ -253,6 +285,10 @@ body.flip-once {
   margin: 0 auto;
 }
 
+/* Font: Inria Serif
+  - Webfont generated via Font Squirrel Webfont Generator 
+  (https://www.fontsquirrel.com/tools/webfont-generator) 
+*/
 .section-heading {
   font-size: 24px;
   font-family: 'Inria Serif', serif;
@@ -292,6 +328,10 @@ body.flip-once {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator) 
+*/
 .step-title {
   font-family: 'InriaSans-Regular', sans-serif;
   font-style: italic;
@@ -300,15 +340,23 @@ body.flip-once {
   margin-bottom: 6px;
 }
 
+/* Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator) 
+*/
 .step-text {
   font-family: 'Inria Sans', sans-serif;
   font-size: 14px;
   line-height: 1.6;
 }
 
-/* ================================
-   Q&A Section
-================================= */
+/* Q&A Section
+   ------------
+   This section answers common skincare questions 
+   in a simple and accessible layout.
+   It’s designed to be easy to read, with a soft color palette 
+   and centered content box.
+*/
 .qa-section {
   background-color: #f0ecc0;
   padding: 60px 30px;
@@ -317,6 +365,10 @@ body.flip-once {
   margin: 60px auto 0;
 }
 
+/* Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator) 
+*/
 .qa-title {
   font-family: 'Inria Serif', serif;
   font-style: italic;
@@ -353,9 +405,19 @@ body.flip-once {
   color: #222;
 }
 
-/* ================================
-   Contact Info Box
-================================= */
+/* Contact Info Box
+   ---------------- 
+   Positioned at the end of the Q&A section.
+   Provides direct contact information to the user.
+   Right-aligned to balance layout and contrast visually 
+   with the left-aligned Q&A title.
+*/
+
+
+/* Font: Inria Sans
+ - Webfont generated via Font Squirrel Webfont Generator 
+  (https://www.fontsquirrel.com/tools/webfont-generator) 
+*/
 .contact {
   margin-top: 40px;
   font-size: 14px;
@@ -364,6 +426,10 @@ body.flip-once {
   font-family: 'Inria Sans', sans-serif;
 }
 
+/* Font: Inria Serif
+ - Webfont generated via Font Squirrel Webfont Generator 
+  (https://www.fontsquirrel.com/tools/webfont-generator) 
+*/
 .contact-title {
   font-size: 25px;
   font-weight: bold;
