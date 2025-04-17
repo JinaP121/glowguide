@@ -1,3 +1,10 @@
+/* ================================
+   Web Fonts - Load custom fonts
+ 
+  Design:
+  - Layout and styling decisions (rounded corners, pastel palette) are custom-designed by the creator for accessibility and softness.
+  - No third-party CSS or JS frameworks were used.
+--> ================================================================================================================================== */
 @font-face {
   font-family: 'Inria Serif';
   src: url('../font/InriaSerif-BoldItalic.woff') format('woff');
@@ -30,7 +37,9 @@
   font-display: swap;
 }
 
-/* Media queries for smaller screens */
+/* Media queries for smaller screens 
+ navigation layout and grid structure for mobile devices 
+*/
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -115,6 +124,10 @@ body {
   transform: translateX(-50%);
 }
 
+/*Font:Inria Serif 
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .site-title {
   font-family: 'Inria Serif', serif;
   font-style: italic;
@@ -149,7 +162,11 @@ body.flip-once {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Page title styling */
+/* Page title styling 
+  Font:Inria Serif 
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .page-title {
   font-family: 'Inria Serif', serif;
   font-style: italic;
@@ -176,6 +193,10 @@ body.flip-once {
   width: 440px;
 }
 
+/*Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .routine-title {
   font-family: 'Inria Sans', sans-serif;
   font-size: 14px;
@@ -197,6 +218,10 @@ body.flip-once {
   color: white;
 }
 
+/* Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .routine-box {
   font-family: 'Inria Sans', sans-serif;
   font-style: italic;
@@ -237,6 +262,10 @@ body.flip-once {
   margin: 30px auto 0;
 }
 
+/* Font:Inria Sans
+- Webfont generated via Font Squirrel Webfont Generator 
+(https://www.fontsquirrel.com/tools/webfont-generator)
+*/
 .midday-title {
   font-family: 'Inria Sans', sans-serif;
   background-color: #e5dd92;
@@ -256,7 +285,11 @@ body.flip-once {
   font-size: 14px;
 }
 
-/* Weekly extras section - use image as background*/
+/* Weekly extras section - use image as background
+   The background image used here url('../image/wkly_extra.png') was created in Figma by Jina Park.
+   I used Figma's basic shape tools to draw five simple circles and arranged them evenly,
+   adjusting their colors to match the soft tone of the site.
+*/
 .weekly-section {
   display: grid;
   grid-template-rows: auto auto auto;
@@ -328,6 +361,9 @@ body.flip-once {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Mobile responsiveness for extras
+   Stacks bubble boxes vertically on very small screens
+*/
 @media (max-width: 600px) {
   .weekly-top-row,
   .weekly-bottom-row {

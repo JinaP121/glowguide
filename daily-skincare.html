@@ -20,7 +20,11 @@
   <!-- Main Title -->
   <h2 class="page-title">Daily Skincare</h2> 
 
-  <!-- AM / PM Cleansing -->
+  <!-- AM / PM Cleansing
+     Two columns: morning (AM) and night (PM) routine.
+     Uses Flexbox layout to align side-by-side on wide screens,
+     and stacks vertically on smaller devices. 
+  -->
   <div class="routine-grid">
     <!-- AM Section -->
     <div class="routine-section">
@@ -53,7 +57,10 @@
     </div>
   </div>
   
-<!-- Midday Cleansing Tip -->
+<!-- Midday Cleansing Tip 
+    Optional skincare tip for midday when face feels oily or sweaty.
+    Visually separated in its own styled box for readability. 
+-->
 <div class="midday-section">
   <h3 class="midday-title">Midday Cleansing</h3>
   <div class="midday-box">
@@ -61,7 +68,11 @@
   </div>
 </div>
 
-<!-- Weekly Extras -->
+<!-- Weekly Extras 
+   This section provides weekly skincare advice in card layout.
+   Flexbox used for clean stacking on mobile.
+   Design uses soft yellow tones and shadow to keep it visually soft. 
+-->
 <section class="weekly-section">
   <h3 class="weekly-title">Weekly Extras</h3>
 
@@ -103,7 +114,11 @@
   </div>
 </section>
 
-  <!-- Javascript to get effect when the change pages -->
+  <!-- Javascript to get effect when the change pages 
+     Smooth transition effect when navigating between pages.
+     Adds a "flip-once" class that triggers CSS transition 
+     (slide left + fade out). If the user is already on the current page, it does nothing.
+  -->
   <script>
     document.querySelectorAll('.nav-item').forEach(link => {
       link.addEventListener('click', function (e) {
